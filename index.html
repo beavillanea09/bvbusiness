@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated title to reflect the new target audience and approachable tone -->
+    <title>Bea Villanea | Your Virtual Partner for Growth</title>
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN for scalable vector icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Google Fonts for custom typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ENHANCED: Custom CSS variables for vibrant brand identity */
+        :root {
+            --primary-pink: #E91E63; /* Stronger, more vibrant pink */
+            --primary-pink-dark: #C2185B; /* Darker shade for hover states */
+            --primary-pink-light: #F8BBD9; /* Light pink for backgrounds */
+            --primary-pink-ultra-light: #FCE4EC; /* Ultra light pink */
+            --accent-gradient: linear-gradient(135deg, #E91E63, #FF6B9D); /* Dynamic gradient */
+            --accent-gradient-hover: linear-gradient(135deg, #C2185B, #E91E63); /* Hover gradient */
+            --neutral-dark: #413f3f; /* Rich dark gray */
+            --neutral-medium: #7e7b7b; /* Medium gray */
+            --neutral-light: #c4c2c2; /* Light gray */
+            --neutral-ultra-light: #F7FAFC; /* Background color */
+            --success-color: #4CAF50; /* Green for success states */
+            --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-strong: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ENHANCED: Typography system with better hierarchy */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--neutral-ultra-light);
+            color: var(--neutral-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--neutral-dark);
+            line-height: 1.2;
+        }
+
+        /* Optimized typography hierarchy - Adjusted font sizes for H1 and H2 */
+        h1 { font-size: clamp(3.2rem, 6vw, 5.5rem); font-weight: 900; line-height: 1.1; }
+        h2 { font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 800; }
+
+        /* ENHANCED: Modern button system with better visual impact */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform: perspective(1px) translateZ(0);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-gradient-hover);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.4);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            background-color: white;
+            color: var(--neutral-medium);
+            border: 2px solid #E2E8F0;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-pink);
+            color: var(--primary-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(233, 30, 99, 0.2);
+        }
+
+        /* ENHANCED: Urgent CTA styling */
+        .btn-urgent {
+            position: relative;
+            animation: pulse-urgent 2s infinite;
+            background: linear-gradient(135deg, #FF6B9D, #E91E63, #C2185B);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite, pulse-urgent 2s infinite;
+        }
+
+        @keyframes pulse-urgent {
+            0%, 100% {
+                box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
+                opacity: 1; /* Ensure opacity is reset */
+                transform: scale(1); /* Re-added for pulsing effect */
+            }
+            50% {
+                box-shadow: 0 12px 40px rgba(233, 30, 99, 0.5);
+                opacity: 0.8; /* Subtle opacity change */
+                transform: scale(1.05); /* Re-added for pulsing effect */
+            }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ENHANCED: Card system with better visual hierarchy */
+        .card-enhanced {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid #F1F5F9;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .card-enhanced:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-enhanced:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* ENHANCED: Hero section with dramatic visual impact */
+        .hero-enhanced {
+            background: linear-gradient(135deg, var(--primary-pink-ultra-light) 0%, white 50%, #F0F9FF 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 0;
+        }
+
+        .hero-enhanced::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 60%;
+            height: 180%;
+            background: radial-gradient(circle, var(--primary-pink-light), transparent 70%);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: heroFloat 8s ease-in-out infinite;
+        }
+
+        .hero-enhanced::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -20%;
+            width: 80%;
+            height: 120%;
+            background: radial-gradient(circle, #E3F2FD, transparent 60%);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: heroFloat 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            33% { transform: translateY(-30px) rotate(2deg) scale(1.05); }
+            66% { transform: translateY(20px) rotate(-1deg) scale(0.98); }
+        }
+
+        /* ENHANCED: Value proposition highlighting */
+        .value-highlight {
+            background: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            display: inline-block;
+            position: relative;
+        }
+
+        .value-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+            opacity: 0.3;
+        }
+
+        /* ENHANCED: Social proof styling */
+        .social-proof-banner {
+            background: linear-gradient(135deg, #C2185B, #cf6891);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            border-left: 4px solid var(--primary-pink); /* Adjusted to 4px as previously */
+            flex-shrink: 0; /* Important for carousel */
+            min-width: 80%; /* On small screens, nearly full width */
+            width: 80%; /* fallback */
+        }
+
+        /* Responsive card widths for infinite scroll */
+        @media (min-width: 768px) { /* md breakpoint */
+            .testimonial-card {
+                min-width: calc((100% / 2) - 0.75rem); /* Two cards per view with gap (gap-6 = 1.5rem = 24px, so 0.75rem on each side) */
+                width: calc((100% / 2) - 0.75rem);
+            }
+        }
+
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .testimonial-card {
+                min-width: calc((100% / 3) - 1rem); /* Three cards per view with gap (gap-6 = 1.5rem, approx 1rem per side) */
+                width: calc((100% / 3) - 1rem);
+            }
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary-pink);
+            opacity: 0.3;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* ENHANCED: Results showcase styling */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .result-stat {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .result-stat:hover {
+            transform: translateY(-8px);
+        }
+
+        .result-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: var(--neutral-medium);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ENHANCED: Animation system */
+        .animate-fade-up {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-fade-up:not(.in-view) {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .animate-fade-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-scale-in {
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-scale-in:not(.in-view) {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .animate-scale-in.in-view {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ENHANCED: Section styling */
+        .section-enhanced {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 4vw, 3.8rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--neutral-dark), var(--primary-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--neutral-medium);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        /* ENHANCED: Banner animation with urgency */
+        .scrolling-banner {
+            overflow: hidden;
+            background: var(--primary-pink);
+            color: white;
+            padding: 1.25rem 0;
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-pink), #FF6B9D);
+        }
+
+        .scrolling-banner::before,
+        .scrolling-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 120px;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .scrolling-banner::before {
+            left: 0;
+            background: linear-gradient(to right, var(--primary-pink), transparent);
+        }
+
+        .scrolling-banner::after {
+            right: 0;
+            background: linear-gradient(to left, var(--primary-pink), transparent);
+        }
+
+        .banner-content {
+            display: flex;
+            animation: scroll-left 20s linear infinite;
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .banner-text {
+            margin-right: 4rem;
+            white-space: nowrap;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ENHANCED: Urgency indicators */
+        .urgency-indicator {
+            background: linear-gradient(135deg, #FF4444, #FF6B6B);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: urgency-pulse 2s infinite;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Re-added transform properties for visual pulse */
+        @keyframes urgency-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+
+        /* ENHANCED: Responsive improvements */
+        @media (max-width: 768px) {
+            .section-enhanced {
+                padding: 4rem 0;
+            }
+
+            .hero-enhanced {
+                padding: 4rem 0;
+                text-align: center;
+            }
+
+            .btn-primary {
+                padding: 1rem 2.5rem;
+                font-size: 1rem;
+            }
+
+            .card-enhanced {
+                padding: 2rem;
+            }
+        }
+
+        /* ENHANCED: Visual elements */
+        .accent-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--primary-pink);
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 1rem;
+            animation: dot-pulse 2s infinite;
+        }
+
+        @keyframes dot-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .divider-enhanced {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-pink), transparent);
+            margin: 4rem 0;
+        }
+
+        /* ENHANCED: Icon styling */
+        .icon-enhanced {
+            background: linear-gradient(135deg, var(--primary-pink-light), var(--primary-pink-ultra-light));
+            border-radius: 24px;
+            padding: 1.25rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .icon-enhanced:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .icon-enhanced i {
+            color: var(--primary-pink);
+        }
+
+        /* ENHANCED: Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            padding: 1.25rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 12px 40px rgba(233, 30, 99, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            animation: floating-bounce 3s ease-in-out infinite;
+        }
+
+        .floating-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: var(--accent-gradient-hover);
+            box-shadow: 0 20px 60px rgba(233, 30, 99, 0.5);
+        }
+
+        @keyframes floating-bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Contact Form Enhanced Styling */
+        .contact-form {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid #F1F5F9;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+            display: block;
+            color: var(--neutral-dark);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            font-size: 1rem;
+            color: var(--neutral-dark);
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-pink);
+            box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        /* Success message styling */
+        .success-message {
+            background: linear-gradient(135deg, #4CAF50, #45A049);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        /* Infinite Carousel specific styles */
+        #testimonial-carousel-wrapper {
+            position: relative;
+            overflow: hidden; /* Hide scrollbars */
+            width: 100%;
+        }
+
+        #testimonial-carousel-track {
+            display: flex;
+            gap: 1.5rem; /* Equivalent to Tailwind's gap-6 */
+            animation: scroll-x linear infinite var(--animation-duration);
+            /* Add this to enable GPU acceleration for smoother animation */
+            will-change: transform;
+        }
+
+        #testimonial-carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-x {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(var(--scroll-distance)); }
+        }
+    </style>
+</head>
+<body>
+    <!-- ENHANCED: Header with improved styling and urgency -->
+    <header class="bg-white/95 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-100">
+        <!-- Social Proof Banner -->
+        <div class="social-proof-banner text-sm">
+            <div class="flex items-center justify-center gap-2">
+                <i data-lucide="check-circle" class="h-4 w-4"></i>
+                <span>✨ Trusted by CEO/Business Owners | 98% Client Satisfaction Rate </span>
+                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+            </div>
+        </div>
+
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold">
+                        <span style="color: var(--primary-pink);">Bea Villanea</span>
+                        <!-- Updated title suffix -->
+                        <span class="text-gray-700 text-lg"> | Your Virtual Partner for Growth</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#services" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="#about" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Meet your VA</a>
+                        <a href="#results" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Results</a>
+                        <a href="#testimonials" class="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">Success Stories</a>
+                        <a href="#contact" class="btn-primary text-sm px-6 py-2">Let's Talk</a>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="space-y-2">
+                    <a href="#services" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">How I Help</a>
+                    <a href="#about" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">About Me</a>
+                    <a href="#results" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">My Impact</a>
+                    <a href="#testimonials" class="block text-gray-600 hover:text-gray-900 px-3 py-2 text-base font-medium">Success Stories</a>
+                    <a href="#contact" class="btn-primary text-sm px-6 py-2">Let's Talk</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ENHANCED: Hero Section with dramatic impact and stronger value proposition for CEOs/Business Owners -->
+        <section class="hero-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="animate-fade-up relative z-10">
+                        <div class="inline-flex items-center bg-white/70 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-pink-200">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                            <span class="text-sm font-medium text-gray-700">📈 Ready to Team Up!</span>
+                        </div>
+                       <h1 class="mb-6 font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-left">
+                            Reclaim Your Focus.
+                            <span style="color: var(--primary-pink);">Scale Your Business.</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed font-medium">
+                            Tired of getting stuck in daily tasks? I'll make your operations run like clockwork. I handle the heavy lifting – from project juggling to digital strategy and team support. You get to focus 100% on expanding your business, innovating, and seriously get big chance of boosting profits by <strong class="text-pink-600">40-60%</strong>.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                            <a href="#contact" class="btn-primary btn-urgent">
+                                <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                                Chat with Me - It's FREE!
+                            </a>
+                            <a href="#results" class="btn-secondary relative z-20">
+                                <i data-lucide="trending-up" class="mr-2 h-4 w-4"></i>
+                                See My Impact
+                            </a>
+                        </div>
+                        <!-- Enhanced credibility indicators -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">13+ Years work experience</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">Business & Digital Pro</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle" class="h-4 w-4 mr-2 text-green-500"></i>
+                                <span class="text-gray-600">Your growth partner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Image Section -->
+                    <div class="animate-scale-in relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl transform rotate-3 opacity-60"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tl from-blue-100 to-pink-100 rounded-3xl transform -rotate-2 opacity-40"></div>
+                        <img
+                            src="https://ik.imagekit.io/ewoioxq0g/WhatsApp%20Image%202025-06-14%20at%2003.36.20_93175f5f.jpg?updatedAt=1749886904306"
+                            alt="Bea Villanea - Strategic Operations Partner for Business Leaders"
+                            class="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/E91E63/ffffff?text=Bea+Villanea';"
+                        >
+                        <!-- Floating testimonial preview -->
+                        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <div class="flex">
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                    <i data-lucide="star" class="h-4 w-4 text-yellow-400 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 italic">"Bea gave me back my time to focus on big-picture growth. Her operational smarts are a total game-changer!"</p>
+                            <p class="text-xs text-gray-500 mt-1">- John S., Tech Startup CEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Results Section - High Impact -->
+        <section id="results" class="section-enhanced bg-gradient-to-br from-gray-50 to-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Real Wins for Smart Business Owners</h2>
+                    <p class="section-subtitle">
+                        CEOs and business owners who team up with me see real changes, fast. We're talking way smoother operations, quicker market moves, boost in productivity, healthier and less stress life. Often, all in just 30 days.
+                    </p>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="20+">0</span>
+                        <span class="result-label">Hours Saved Weekly</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="45%">0</span>
+                        <span class="result-label">Productivity Boost</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="98%">0</span>
+                        <span class="result-label">Happy Clients</span>
+                    </div>
+                    <div class="result-stat animate-fade-up">
+                        <span class="result-number" data-final-value="30">0</span>
+                        <span class="result-label">Day Business Makeover</span>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#testimonials" class="btn-secondary">
+                        <i data-lucide="arrow-right" class="mr-2 h-4 w-4"></i>
+                        Hear Their Stories
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Scrolling Banner with stronger messaging -->
+        <div class="scrolling-banner">
+            <div class="banner-content">
+                <span class="banner-text">⚡ GET 20+ HOURS BACK FOR BIG IDEAS</span>
+                <span class="banner-text">🚀 SUPERCHARGE YOUR PROFITS & GROWTH</span>
+                <span class="banner-text">✨ INNOVATE & EXPAND, WORRY-FREE</span>
+                <span class="banner-text">📈 SMARTEN UP YOUR DAILY OPERATIONS</span>
+                <span class="banner-text">💎 TOP-NOTCH HELP FOR LEADERS</span>
+                <span class="banner-text">🎯 BUSINESS MAKEOVER IN 30 DAYS</span>
+                <span class="banner-text">⚡ GET 20+ HOURS BACK FOR BIG IDEAS</span>
+                <span class="banner-text">🚀 SUPERCHARGE YOUR PROFITS & GROWTH</span>
+                <span class="banner-text">✨ INNOVATE & EXPAND, WORRY-FREE</span>
+                <span class="banner-text">📈 SMARTEN UP YOUR DAILY OPERATIONS</span>
+            </div>
+        </div>
+
+        <!-- ENHANCED: Problem Section with stronger emotional impact -->
+        <section id="problem" class="section-enhanced bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Are You Trapped in the Administrative & Operational Maze?</h2>
+                    <p class="section-subtitle">
+                        You didn't become a CEO or business owner to spend 70% of your time on administrative tasks, project management, and daily operations. Let's fix that.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="clock" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-red-600">The Time Thief</h3>
+                        <p class="text-gray-600 mb-4">
+                            You're clocking 20+ hours a week on stuff that isn't helping you strategize. Things like detailed project coordination, routine emails, data entry, and marketing busywork are eating up your time.
+                        </p>
+                        <div class="text-sm text-red-500 font-semibold">
+                            💰 Cost: Loss revenue growth opportunities, and new ideas stuck in neutral.
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="trending-down" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-red-600">Missing Big Chances</h3>
+                        <p class="text-gray-600 mb-4">
+                            Every hour on small tasks is an hour not spent on market analysis, beating the competition, building key partnerships, or landing new clients.
+                        </p>
+                        <div class="text-sm text-red-500 font-semibold">
+                            📉 Result: Your business isn't growing as fast as it could be. You're missing out.
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="battery-low" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 text-red-600">Leader Burnout Alert</h3>
+                        <p class="text-gray-600 mb-4">
+                            Jumping between leading your team and handling daily operations? It's exhausting and not sustainable. That's a recipe for burnout.
+                        </p>
+                        <div class="text-sm text-red-500 font-semibold">
+                            🔥 Warning: Your big ideas are getting lost in the daily grind.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn-primary btn-urgent">
+                        <i data-lucide="arrow-right" class="mr-2 h-5 w-5"></i>
+                        End the Struggle - Book Your Free Call
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Services Section with better value proposition for CEOs/Business Owners -->
+        <section id="services" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Smart & Strategic Support for Busy Leaders Like you</h2>
+                    <p class="section-subtitle">
+                        Picture your business running flawlessly, freeing you to dominate the market, spark groundbreaking ideas, and maximize profits. 
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="users" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Smooth Executive Communications</h3>
+                        <p class="text-gray-600 text-sm mb-4">I'll handle high-level messages, client and partner chats, and ensure smooth communication with everyone involved.</p>
+                        <div class="text-sm text-pink-600 font-semibold">✨ Build great relationships & keep everyone in the loop.</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="calendar" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Smart Calendar & Project Management</h3>
+                        <p class="text-gray-600 text-sm mb-4">I'll efficiently manage your executive calendar, coordinate vital projects, and ensure all deadlines are met across your teams.</p>
+                        <div class="text-sm text-pink-600 font-semibold">⏰ Stay focused & get projects done!</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="share-2" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Next-Level Digital Marketing & Content</h3>
+                        <p class="text-gray-600 text-sm mb-4">Create visually attractive graphics, manage and schedule contents. Plus, full podcast management expanding your brand's reach.</p>
+                        <div class="text-sm text-pink-600 font-semibold">📈 Get your brand seen & build your community
+                            .</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="dollar-sign" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Basic Invoicing Support</h3>
+                        <p class="text-gray-600 text-sm mb-4">I'll take care of your invoicing, making sure all your financial records are perfectly in order.</p>
+                        <div class="text-sm text-pink-600 font-semibold">💰 Keep your finances organized.</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="clipboard" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Document & Info System Cleanup</h3>
+                        <p class="text-gray-600 text-sm mb-4">I'll streamline documents, manage crucial records, and ensure all data is tidy, safe, and easy to find.</p>
+                        <div class="text-sm text-pink-600 font-semibold">🎯 Keep your data clean & operations smooth.</div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="globe" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Website & CRM TLC</h3>
+                        <p class="text-gray-600 text-sm mb-4">Boost lead generation with expertly managed website updates, CRM fine-tuning, and impactful email campaigns. </p>
+                        <div class="text-sm text-pink-600 font-semibold">🌟 Rock your online presence & reel in more leads.</div>
+                    </div>
+
+                    <!-- NEW: Talent Acquisition/Recruitment Service Card -->
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="briefcase" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Talent Acquisition & Onboarding</h3>
+                        <p class="text-gray-600 text-sm mb-4">I'll give you full support in finding, interviewing, and bringing new talent onto your team, making sure they fit right in.</p>
+                        <div class="text-sm text-pink-600 font-semibold">👥 Build your dream team, stress-free.</div>
+                    </div>
+
+                    <!-- NEW: Executive Content Repurposing & Distribution Service Card -->
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="mic" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Funnels & Digital Strategy Secrets</h3>
+                        <p class="text-gray-600 text-sm mb-4">I create high-converting sales funnels, easy booking systems, effective emails, automated workflows, and compelling lead magnets. All perfect for your goals.</p>
+                        <div class="text-sm text-pink-600 font-semibold">💡 Make your strategy slick & turn lookers into loyal clients!</div>
+                    </div>
+
+                    <!-- REVISED: Your professional cheerleader Card -->
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="icon-enhanced">
+                            <i data-lucide="sparkles" class="h-8 w-8"></i>
+                            <!-- Changed icon to sparkles for a more 'cheerleader' vibe -->
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">Your Personal Growth & Accountability Partner</h3>
+                        <p class="text-gray-600 text-sm mb-4">Beyond tasks, I give you solid strategic support, fresh insights, and that extra push to keep you energized, laser-focused on your goals, and ready for continuous growth.</p>
+                        <div class="text-sm text-pink-600 font-semibold">🎉 Keep your vision sharp & crush your goals!</div>
+                    </div>
+
+                    <!-- END NEW SERVICE CARD -->
+
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn-primary">
+                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                        Let's Talk Business
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: About Section with stronger positioning for business leaders -->
+        <section id="about" class="section-enhanced bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="animate-fade-up">
+                        <div class="inline-flex items-center bg-pink-100 rounded-full px-4 py-2 mb-6">
+                            <span class="text-sm font-semibold text-pink-700">👋 Meet Your Growth Partner</span>
+                        </div>
+                        <h2 class="section-title text-left">Why Smart Business Owners Choose Me</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Hey, I'm Bea Villanea. With over 13 years in executive support, marketing, operations, tech, and customer service, I'm way more than just a task-doer. I'm your dedicated partner, helping you scale your business. You stay totally focused on innovating, leading, and making those big-impact decisions.
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">13+ Years of professional experience:</span>
+                                    <span class="text-gray-700 ml-1">Proven track record with satisfied business leaders</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Industry-Certified Professional:</span>
+                                    <span class="text-gray-700 ml-1">Google & Meta certified with specialized operational workflow expertise</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Strategic Business Partner:</span>
+                                    <span class="text-gray-700 ml-1">I understand market dynamics, operational bottlenecks, and growth strategies</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-6 h-6 bg-pink-500 rounded-full mr-4 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="check" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <span class="font-semibold text-gray-800">Dedicated & Resilient:</span>
+                                    <span class="text-gray-700 ml-1">Marathon runner mindset – I go the distance for your success</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 border border-pink-100 mb-8">
+                            <p class="text-gray-700 italic text-lg">
+                                "My mission is simple: Fast-tracking your business growth with solid, sustainable results." - Bea
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contact" class="btn-primary">
+                                <i data-lucide="message-circle" class="mr-2 h-5 w-5"></i>
+                                Let's Chat About Your Vision
+                            </a>
+                            <a href="#testimonials" class="btn-secondary">
+                                <i data-lucide="star" class="mr-2 h-4 w-4"></i>
+                                Hear Their Stories
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="animate-scale-in">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-pink-200 to-purple-200 rounded-3xl transform -rotate-3"></div>
+                            <div class="absolute inset-0 bg-gradient-to-tl from-blue-100 to-pink-100 rounded-3xl transform rotate-2 opacity-60"></div>
+                            <img
+                                src="https://ik.imagekit.io/ewoioxq0g/WhatsApp%20Image%202025-06-14%20at%2003.38.06_4e303549.jpg?updatedAt=1749886904077"
+                                alt="Bea Villanea - Strategic Operations Partner for Business Leaders"
+                                class="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x400/E91E63/ffffff?text=Bea+Villanea';"
+                            >
+                            <!-- Floating achievement badges -->
+                            <div class="absolute -top-4 -right-4 bg-white rounded-2xl p-3 shadow-xl border border-gray-100">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-pink-600">98%</div>
+                                    <div class="text-xs text-gray-600">Client Satisfaction</div>
+                                </div>
+                            </div>
+
+                            <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-3 shadow-xl border border-gray-100">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-pink-600">13+</div>
+                                    <div class="text-xs text-gray-600">Years Experience</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: 30-Day Transformation with better visual impact for business leaders -->
+        <section id="transformation" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Your 30-Day Plan: Strategic & Optimized Workflow </h2>
+                    <p class="section-subtitle">
+                        Clients see measurable improvements in daily operations <strong>within just 30 days</strong>. This means you'll quickly have more time and efficiency to focus on growth.
+                    </p>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- Enhanced timeline line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-pink-500 via-pink-400 to-pink-300 rounded-full shadow-lg"></div>
+
+                    <div class="space-y-16">
+                        <!-- Week 1 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="w-full lg:w-1/2 lg:pr-12 text-right animate-fade-up">
+                                <div class="card-enhanced mb-4 lg:mb-0">
+                                    <div class="mb-6">
+                                        <span class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-xl font-bold shadow-lg">1</span>
+                                        <h3 class="text-2xl font-bold mt-4 mb-2">Days 1-7: Quick Setup & Executive Help</h3>
+                                        <div class="text-sm text-pink-600 font-semibold mb-3">🚀 Fast Wins Phase</div>
+                                    </div>
+                                    <p class="text-gray-600 text-lg leading-relaxed">
+                                        We'll set up smooth systems. I'll immediately jump in on your most time-consuming admin and operational tasks. Think important communications and getting projects rolling. You'll feel a huge weight lifted within 48 hours.
+                                    </p>
+                                    <div class="mt-4 text-sm">
+                                        <strong class="text-green-600">Result:</strong> <span class="text-gray-700">You'll gain 5-8 hours in your first week. Perfect for strategic planning, big meetings, or market research.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative lg:mx-8">
+                                <div class="w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-xl flex items-center justify-center">
+                                    <i data-lucide="zap" class="h-4 w-4 text-white"></i>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pl-12">
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                        </div>
+
+                        <!-- Week 2-3 -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pr-12">
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                            <div class="relative lg:mx-8">
+                                <div class="w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-xl flex items-center justify-center">
+                                    <i data-lucide="trending-up" class="h-4 w-4 text-white"></i>
+                                </div>
+                            </div>
+                            <div class="w-full lg:w-1/2 lg:pl-12 text-left animate-fade-up">
+                                <div class="card-enhanced mt-4 lg:mt-0">
+                                    <div class="mb-6">
+                                        <span class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-xl font-bold shadow-lg">2</span>
+                                        <h3 class="text-2xl font-bold mt-4 mb-2">Days 8-25: Boost Processes & Growth</h3>
+                                        <div class="text-sm text-pink-600 font-semibold mb-3">⚡ Building Momentum Phase</div>
+                                    </div>
+                                    <p class="text-gray-600 text-lg leading-relaxed">
+                                        I'll proactively handle your core business operations, marketing, and keep key people updated. You'll notice much better workflows and an easier road to hitting your goals.
+                                    </p>
+                                    <div class="mt-4 text-sm">
+                                        <strong class="text-green-600">Result:</strong> <span class="text-gray-700">Save 15-20 hours a week. All your crucial projects and partnerships will run like clockwork.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Week 4+ -->
+                        <div class="flex flex-col lg:flex-row items-center">
+                            <div class="w-full lg:w-1/2 lg:pr-12 text-right animate-fade-up">
+                                <div class="card-enhanced mt-4 lg:mt-0">
+                                    <div class="mb-6">
+                                        <span class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 text-white rounded-full text-xl font-bold shadow-lg">3</span>
+                                        <h3 class="text-2xl font-bold mt-4 mb-2">Day 30+: Lead Smart & Grow Fast</h3>
+                                        <div class="text-sm text-pink-600 font-semibold mb-3">🎯 Grow & Thrive Phase</div>
+                                    </div>
+                                    <p class="text-gray-600 text-lg leading-relaxed">
+                                        Your business will run like a finely tuned machine. You'll be totally free to focus on high-impact growth, expanding your market, developing new products, and just generally making your business succeed even faster.
+                                    </p>
+                                    <div class="mt-4 text-sm">
+                                        <strong class="text-green-600">Result:</strong> <span class="text-gray-700">You'll have 20+ hours weekly for leading and growing, with the potential to boost your profits by 40-60%.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative lg:mx-8">
+                                <div class="w-8 h-8 bg-pink-500 rounded-full border-4 border-white shadow-xl flex items-center justify-center">
+                                    <i data-lucide="crown" class="h-4 w-4 text-white"></i>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block w-full lg:w-1/2 lg:pl-12">
+                                <!-- Empty space for alternating layout on desktop -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16">
+                    <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Ready for a Business Makeover?</h3>
+                        <p class="text-gray-600 mb-6">Join other smart business leaders who've made their operations smoother and sped up their growth.</p>
+                        <a href="#contact" class="btn-primary btn-urgent">
+                            <i data-lucide="rocket" class="mr-2 h-5 w-5"></i>
+                            Let's Start Your Transformation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: Testimonials Section with infinite scroll carousel -->
+        <section id="testimonials" class="section-enhanced bg-gray-50 overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Awesome Stories from Business Leaders</h2>
+                    <p class="section-subtitle">
+                        Hear how top CEOs and business owners changed their operations for the better. They boosted growth and overall happiness.
+                    </p>
+                </div>
+
+                <div id="testimonial-carousel-wrapper" class="relative overflow-hidden w-full py-4">
+                    <div id="testimonial-carousel-track" class="flex gap-6">
+                        <!-- Testimonial Cards - These will be cloned by JavaScript for infinite scroll -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-2">
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                                "Bea gave me back my time to focus on growth. Her operational smarts are a total game-changer!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/E91E63/ffffff?text=JS" alt="John S." class="w-14 h-14 rounded-full object-cover mr-4" onerror="this.onerror=null; this.src='https://placehold.co/120x120/E91E63/ffffff?text=JS';">
+                                <cite>
+                                    <p class="font-semibold text-lg">John S.</p>
+                                    <p class="text-sm text-gray-500">Tech Startup CEO</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Gained 20+ Hrs Weekly</p>
+                                </cite>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-2">
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                                "Bea totally changed how we run things. Now I lead the team and grow the business. Our team is crushing it!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/E91E63/ffffff?text=RL" alt="Rachel L." class="w-14 h-14 rounded-full object-cover mr-4" onerror="this.onerror=null; this.src='https://placehold.co/120x120/E91E63/ffffff?text=RL';">
+                                <div>
+                                    <p class="font-semibold text-lg">Rachel L.</p>
+                                    <p class="text-sm text-gray-500">Enterprise Founder</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Productivity Jumped by 45%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-2">
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                                "Bea saves me 25+ hours a week! Projects finish faster, and our partners are happier. She's a true strategic partner!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/E91E63/ffffff?text=DP" alt="David P." class="w-14 h-14 rounded-full object-cover mr-4" onerror="this.onerror=null; this.src='https://placehold.co/120x120/E91E63/ffffff?text=DP';">
+                                <div>
+                                    <p class="font-semibold text-lg">David P.</p>
+                                    <p class="text-sm text-gray-500">Managing Director</p>
+                                    <p class="text-xs text-pink-600 font-semibold">98% Project Satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NEW TESTIMONIAL CARD: Project Based Work -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-2">
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                                "Bea's project management skills are unparalleled. She kept our complex initiatives on track and delivered results ahead of schedule. A true professional!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/1a73e8/ffffff?text=MB" alt="Mark B." class="w-14 h-14 rounded-full object-cover mr-4" onerror="this.onerror=null; this.src='https://placehold.co/120x120/1a73e8/ffffff?text=MB';">
+                                <div>
+                                    <p class="font-semibold text-lg">Mark B.</p>
+                                    <p class="text-sm text-gray-500">Startup Co-founder</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Projects Completed 15% Faster</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NEW TESTIMONIAL CARD: Graphic Design & Thumbnail Creation -->
+                       <div class="testimonial-card">
+                            <div class="star-rating flex mb-2">
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                                "Our social media visuals have never looked better! Bea's graphic design and thumbnail work is consistently high-quality and impactful, boosting our engagement."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/34a853/ffffff?text=SR" alt="Sarah R." class="w-14 h-14 rounded-full object-cover mr-4" onerror="this.onerror=null; this.src='https://placehold.co/120x120/34a853/ffffff?text=SR';">
+                                <div>
+                                    <p class="font-semibold text-lg">Sarah R.</p>
+                                    <p class="text-sm text-gray-500">Marketing Manager</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Engagement Up by 20%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NEW TESTIMONIAL CARD: Content Calendar -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-2">
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                                "Bea built us a content calendar that's pure gold! Its impact is continuous. Her efficiency is top-notch."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/8A2BE2/ffffff?text=LM" alt="Lisa M." class="w-14 h-14 rounded-full object-cover mr-4" onerror="this.onerror=null; this.src='https://placehold.co/120x120/8A2BE2/ffffff?text=LM';">
+                                <div>
+                                    <p class="font-semibold text-lg">Lisa M.</p>
+                                    <p class="text-sm text-gray-500">Marketing Director</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Content Workflow Revolutionized</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NEW TESTIMONIAL CARD: Website Update -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-2">
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                                "Our website needed a refresh. Bea handled the entire update seamlessly. It looks professional and functions perfectly!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/4CAF50/ffffff?text=RT" alt="Robert T." class="w-14 h-14 rounded-full object-cover mr-4" onerror="this.onerror=null; this.src='https://placehold.co/120x120/4CAF50/ffffff?text=RT';">
+                                <div>
+                                    <p class="font-semibold text-lg">Robert T.</p>
+                                    <p class="text-sm text-gray-500">E-commerce Founder</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Website Fully Optimized</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NEW TESTIMONIAL CARD: Email Campaigns (Example of "project-based work") -->
+                        <div class="testimonial-card">
+                            <div class="star-rating flex mb-2">
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                                <i data-lucide="star" class="h-5 w-5 text-yellow-400 fill-current"></i>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic text-lg leading-relaxed">
+                                "Bea launched our new email campaign series flawlessly. From strategy to execution, every detail was handled, leading to our best open rates ever!"
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/120x120/FF5722/ffffff?text=GS" alt="Grace S." class="w-14 h-14 rounded-full object-cover mr-4" onerror="this.onerror=null; this.src='https://placehold.co/120x120/FF5722/ffffff?text=GS';">
+                                <div>
+                                    <p class="font-semibold text-lg">Grace S.</p>
+                                    <p class="text-sm text-gray-500">Online Course Creator</p>
+                                    <p class="text-xs text-pink-600 font-semibold">Email Open Rates +30%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced CTA -->
+                <div class="text-center bg-white rounded-3xl p-8 shadow-xl border border-pink-100 mt-12">
+                    <h3 class="text-2xl font-bold mb-4">Ready to Add Your Success Story?</h3>
+                    <p class="text-gray-600 mb-6">Your business transformation story could be next. Let's chat about making it happen.</p>
+                    <a href="#contact" class="btn-primary btn-urgent">
+                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                        Book Your Success Call
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENHANCED: FAQ Section with better user experience for business owners -->
+        <section id="faq" class="section-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Your Questions, Answered</h2>
+                    <p class="section-subtitle">
+                        Everything you need to know about partnering with a specialized Strategic Operations Partner for your business.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">How fast can you help my business?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    You'll see impact in just 48 hours! I can immediately handle high-priority executive tasks like key communications and initial project setup. More complex system integrations usually take 3-5 days. Most business leaders feel a big relief in their first week. A huge operational transformation happens by day 30.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">What makes your partnership unique?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    My approach is just for business leaders. I don't just do tasks. I strategically optimize your workflows, anticipate needs, and spot growth chances. With 13+ years in executive support and certifications from Google & Meta, I bring top-tier help and digital marketing know-how to boost your business goals.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">Can you use my current business tools?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Absolutely! I'm super adaptable with many business software types. This includes project management (Asana, Trello, Jira), CRMs (Salesforce, HubSpot), communication (Slack, MS Teams), marketing automation (Mailchimp, ActiveCampaign), and office suites. I pride myself on quickly mastering any special tools you use.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">How do we handle communication and time zones?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    I offer flexible hours to match your business's main time zone. This ensures smooth collaboration, no matter where you are. We'll set up how we prefer to chat (Slack for quick updates, email for detailed reports, video calls for strategy) and regular check-ins. Many key tasks can be done anytime, keeping things moving.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">What kind of results can I really expect?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Based on client success, you can expect to:
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                                    <li>Reclaim 15-25 executive hours weekly for strategic tasks and high-value leadership.</li>
+                                    <li>Boost overall profitability by 40-60% through better operations and more capacity.</li>
+                                    <li>Increase client satisfaction and retention with smoother processes.</li>
+                                    <li>Reduce stress and avoid burnout** by delegating complex tasks.</li>
+                                    <li>Scale your business faster to handle more growth opportunities.</li>
+                                </ul>
+                                <p class="text-gray-600">
+                                    These aren't just promises – they're what usually happens when I partner with top business leaders.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-enhanced animate-fade-up">
+                        <div class="faq-item">
+                            <button class="faq-question w-full text-left p-6 flex justify-between items-center focus:outline-none group">
+                                <span class="font-semibold text-lg group-hover:text-pink-600 transition-colors">How do we get started?</span>
+                                <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transition-transform duration-200"></i>
+                            </button>
+                            <div class="faq-answer hidden px-6 pb-6">
+                                <p class="text-gray-600 leading-relaxed">
+                                    It's simple and risk-free:
+                                </p>
+                                <ol class="list-decimal list-inside text-gray-600 space-y-2 mb-6">
+                                    <li>Book a free 30-minute chat to discuss your business challenges and growth goals.</li>
+                                    <li>Get a custom plan tailored to your specific operational and strategic needs.</li>
+                                    <li>Feel immediate relief as I take over key tasks, freeing you up for high-level leadership.</li>
+                                </ol>
+                                <div class="bg-pink-50 rounded-xl p-4 border border-pink-200">
+                                    <p class="text-pink-800 font-semibold mb-2">Ready for a business change?</p>
+                                    <a href="#contact" class="btn-primary inline-flex items-center">
+                                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                                        Schedule Your Free Chat Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section id="contact" class="section-enhanced hero-enhanced">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="section-title">Ready to Grow Faster & Make Your Business Run Smoother?</h2>
+                        <p class="section-subtitle">
+                            Grab your free 30-minute strategy call. Let's find out exactly how I can turn your operational headaches into smooth, fast success in just 30 days. You'll be free to focus on leading with vision and expanding your business.
+                        </p>
+                        <div class="urgency-indicator mb-8">
+                            <i data-lucide="clock" class="h-4 w-4"></i>
+                            Don't miss out on this high-level support!
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <!-- Right side: Professional Card (moved to the right) -->
+                        <div class="animate-scale-in">
+                            <div class="card-enhanced text-center">
+                                <img
+                                    src="https://ik.imagekit.io/ewoioxq0g/Untitled%20design%20(4).png?updatedAt=1749778070801"
+                                    alt="Bea Villanea - Strategic Operations Partner for Business Leaders"
+                                    class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-xl ring-4 ring-pink-100"
+                                >
+                                <h3 class="text-2xl font-bold mb-3">Let's Make Your Business Super Successful, Together!</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    I'm genuinely excited to hear about your unique business challenges. Let's chat about how we can team up to hit your big growth goals. No pressure, just honest talk and practical strategies for a smarter, more profitable business.
+                                </p>
+
+                                <div class="bg-pink-50 rounded-xl p-4 mb-6 border border-pink-200">
+                                    <div class="grid grid-cols-2 gap-4 text-sm">
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-pink-600">98%</div>
+                                            <div class="text-xs text-gray-600">Client Satisfaction Rate</div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-pink-600">45%</div>
+                                            <div class="text-xs text-gray-600">Average Profitability Increase</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 text-sm text-gray-500">
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="mail" class="h-4 w-4 mr-2"></i>
+                                        villaneabe1@gmail.com
+                                    </p>
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="clock" class="h-4 w-4 mr-2"></i>
+                                        Available Mon-Fri, 9AM-6PM Your Time
+                                    </p>
+                                    <p class="flex items-center justify-center">
+                                        <i data-lucide="map-pin" class="h-4 w-4 mr-2"></i>
+                                        Based in Philippines, Flexible Schedule
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left side: Value Proposition & Contact Options -->
+                        <div class="animate-fade-up">
+                            <div class="bg-white rounded-3xl p-8 shadow-xl border border-pink-100 mb-8">
+                                <h3 class="text-2xl font-bold mb-6 text-center">What You'll Gain in Your Free Call:</h3>
+
+                                <div class="space-y-6">
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="search" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">A Good Look at Your Business Operations</p>
+                                            <p class="text-gray-600 text-sm">Figure out where daily tasks are slowing your progress and hurting profits.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="target" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Your Own Operations Playbook</p>
+                                            <p class="text-gray-600 text-sm">A personalized plan to get you back 20+ executive hours every week. Focus on core growth and new ideas.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="trending-up" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Your Fast-Track Growth Plan</p>
+                                            <p class="text-gray-600 text-sm">A clear path to boost your profits by 40-60%. Make your main business processes and online presence awesome.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="icon-enhanced mr-4 !mb-0">
+                                            <i data-lucide="gift" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold">Bonus Gift</p>
+                                            <p class="text-gray-600 text-sm">Your free "How to Supercharge Your Business with Executive Support" Ebook.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center space-y-4">
+                                <a href="https://calendly.com/villaneabe1/30min" target="_blank" class="btn-primary btn-urgent w-full justify-center text-lg py-4">
+                                    <i data-lucide="calendar" class="mr-3 h-6 w-6"></i>
+                                    Book Your FREE Strategy Call Now
+                                </a>
+
+                                <p class="text-sm text-gray-500">⚡ Typically books within 24-48 hours</p>
+
+                                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                    <a href="mailto:villaneabe1@gmail.com" class="btn-secondary flex-1 justify-center">
+                                        <i data-lucide="mail" class="mr-2 h-4 w-4"></i>
+                                        Shoot an Email
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/bea-villanea-3a2a862a9" target="_blank" class="btn-secondary flex-1 justify-center">
+                                        <i data-lucide="linkedin" class="mr-2 h-4 w-4"></i>
+                                        Find Me on LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional trust signals -->
+                    <div class="text-center mt-12 pt-8 border-t border-pink-200">
+                        <p class="text-gray-600 mb-4">
+                            <strong>🔒 Totally Confidential</strong> • <strong>📞 Zero Pressure</strong> • <strong>💝 Real Value, Guaranteed</strong>
+                        </p>
+                        <p class="text-sm text-gray-500 italic">
+                            "Every chat starts with truly understanding what your business needs. I'm here to help you succeed, not to push." - Bea
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ENHANCED: Footer with better structure -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-white font-bold text-xl mb-4">Bea Villanea</h3>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Your dedicated Strategic Operations Partner. I help business leaders get their time back, grow their companies, and focus on what they do best – leading with vision, creating new things, and driving awesome growth.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/bea-villanea-3a2a862a9/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </a>
+                        <a href="mailto:villaneabe1@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="mail" class="h-5 w-5"></i>
+                        </a>
+                        <a href="https://calendly.com/villaneabe1/30min" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="calendar" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">What I Help With</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Executive Comms</li>
+                        <li>Calendar & Project Help</li>
+                        <li>Digital Marketing & Content</li>
+                        <li>Finances & Expenses</li>
+                        <li>Document & Info Systems</li>
+                        <li>Website & CRM Admin</li>
+                        <li>Hiring & Onboarding</li>
+                        <li>Funnels & Digital Strategy</li>
+                        <li>Partner & Accountability</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Get Started</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>
+                            <a href="#contact" class="hover:text-white transition-colors">Free Consultation</a>
+                        </li>
+                        <li>
+                            <a href="mailto:villaneabe1@gmail.com" class="hover:text-white transition-colors">villaneabe1@gmail.com</a>
+                        </li>
+                        <li>Available Mon-Fri</li>
+                        <li>Flexible Time Zones</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Bea Villanea. All rights reserved. | Helping Business Leaders Rock!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Floating CTA Button -->
+    <a href="#contact" class="floating-cta">
+        <i data-lucide="calendar" class="h-5 w-5"></i>
+        Book Free Call
+        <span class="text-xs bg-white/20 px-2 py-1 rounded-full">FREE</span>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) { // Added null checks
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+
+            // Enhanced Intersection Observer for animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '50px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements and check initial visibility
+            document.querySelectorAll('.animate-fade-up, .animate-scale-in').forEach(el => {
+                observer.observe(el);
+
+                // Check if element is already in view on page load
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                if (rect.top >= 0 && rect.top <= windowHeight) {
+                    el.classList.add('in-view');
+                }
+            });
+
+            // Enhanced FAQ functionality
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.closest('.faq-item');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const chevron = button.querySelector('i[data-lucide="chevron-down"]');
+
+                    const isOpen = answer && !answer.classList.contains('hidden'); // Ensure answer exists
+
+                    // Close all other FAQ items if they are open
+                    document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                        if (otherAnswer && otherAnswer !== answer && !otherAnswer.classList.contains('hidden')) { // Ensure otherAnswer exists
+                            otherAnswer.classList.add('hidden');
+                            const otherChevron = otherAnswer.closest('.faq-item')?.querySelector('i[data-lucide="chevron-down"]'); // Use optional chaining
+                            if (otherChevron) { 
+                                otherChevron.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+
+                    // Toggle current item
+                    if (answer) { // Ensure answer exists
+                        if (isOpen) {
+                            answer.classList.add('hidden');
+                            if (chevron) {
+                                chevron.style.transform = 'rotate(0deg)';
+                            }
+                        } else {
+                            answer.classList.remove('hidden');
+                            if (chevron) {
+                                chevron.style.transform = 'rotate(180deg)';
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add scroll progress indicator
+            const progressBar = document.createElement('div');
+            progressBar.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 3px;
+                background: linear-gradient(135deg, #E91E63, #FF6B9D);
+                z-index: 9999;
+                transition: width 0.25s ease;
+            `;
+            document.body.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+
+            // Enhanced floating CTA behavior
+            const floatingCTA = document.querySelector('.floating-cta');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (floatingCTA) { // Null check for floatingCTA
+                    if (scrollTop > lastScrollTop && scrollTop > 100) {
+                        // Scrolling down - hide CTA
+                        floatingCTA.style.transform = 'translateY(100px)';
+                        floatingCTA.style.opacity = '0';
+                    } else {
+                        // Scrolling up - show CTA
+                        floatingCTA.style.transform = 'translateY(0)';
+                        floatingCTA.style.opacity = '1';
+                    }
+                }
+                lastScrollTop = scrollTop;
+            });
+
+            // New: Scroll-activated number counter animation
+            const numberCounters = document.querySelectorAll('.result-number');
+            const animatedNumbers = new Set(); // To ensure animation runs only once per element
+
+            const animateNumber = (element) => {
+                if (animatedNumbers.has(element)) {
+                    return; // Already animated
+                }
+                
+                const finalValue = element.getAttribute('data-final-value');
+                // Extract numeric part using regex
+                const numericMatch = finalValue.match(/(\d+(\.\d+)?)/);
+                const numericTarget = numericMatch ? parseFloat(numericMatch[1]) : 0;
+
+                let current = 0;
+                const duration = 1500; // milliseconds
+                const step = numericTarget / (duration / 16); // ~60 frames per second for smoothness
+
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= numericTarget) {
+                        clearInterval(timer);
+                        element.textContent = finalValue; // Set to the original text with suffix
+                        animatedNumbers.add(element); // Mark as animated
+                    } else {
+                        // Display integer if original is integer, otherwise float (with 0 decimal places for simplicity)
+                        if (Number.isInteger(numericTarget)) {
+                            element.textContent = Math.floor(current);
+                        } else {
+                            element.textContent = current.toFixed(0); // Keeping it as integer for current count
+                        }
+                    }
+                }, 16); // Approximately 60 frames per second
+            };
+
+            const resultsSection = document.getElementById('results'); // Get the whole section
+
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Find all number elements within this section
+                        const numbersInView = entry.target.querySelectorAll('.result-number');
+                        numbersInView.forEach(numElement => {
+                            animateNumber(numElement);
+                        });
+                        // Stop observing the section once its numbers are animated
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Trigger when 50% of the section is visible
+            });
+
+            // Observe the entire results section
+            if (resultsSection) {
+                sectionObserver.observe(resultsSection);
+            }
+
+            // Infinite Testimonial Carousel functionality
+            const testimonialCarouselTrack = document.getElementById('testimonial-carousel-track');
+            // Select all direct children that are testimonial cards
+            let originalTestimonialCards = Array.from(testimonialCarouselTrack.querySelectorAll('.testimonial-card'));
+
+            if (testimonialCarouselTrack && originalTestimonialCards.length > 0) {
+                // Clone all original cards and append them once to create the seamless loop
+                originalTestimonialCards.forEach(card => {
+                    testimonialCarouselTrack.appendChild(card.cloneNode(true));
+                });
+
+                const calculateAndSetAnimation = () => {
+                    // Recalculate original cards if any changes occurred (though this isn't dynamic in this simple setup)
+                    // Ensure the width calculation is based on ONE full set of original cards
+                    let totalOriginalWidth = 0;
+                    const gap = parseFloat(window.getComputedStyle(testimonialCarouselTrack).gap);
+
+                    originalTestimonialCards.forEach(card => {
+                        totalOriginalWidth += card.offsetWidth + gap;
+                    });
+                    // Subtract the last gap as it's not between cards
+                    totalOriginalWidth -= gap;
+
+
+                    // Set CSS variables for animation
+                    testimonialCarouselTrack.style.setProperty('--scroll-distance', `-${totalOriginalWidth}px`);
+                    const animationSpeed = 0.02; // pixels per millisecond (adjust for desired speed)
+                    const duration = totalOriginalWidth / animationSpeed; // milliseconds
+                    testimonialCarouselTrack.style.setProperty('--animation-duration', `${duration / 1000}s`); // Convert to seconds
+
+                    // Pause on hover
+                    testimonialCarouselTrack.addEventListener('mouseenter', () => {
+                        testimonialCarouselTrack.style.animationPlayState = 'paused';
+                    });
+                    testimonialCarouselTrack.addEventListener('mouseleave', () => {
+                        testimonialCarouselTrack.style.animationPlayState = 'running';
+                    });
+                };
+
+                // Initial setup for the infinite carousel
+                calculateAndSetAnimation();
+                // Recalculate and reset animation on window resize
+                window.addEventListener('resize', calculateAndSetAnimation);
+            }
+        });
+    </script>
+</body>
+</html>

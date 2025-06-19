@@ -37,6 +37,7 @@
             background-color: var(--neutral-ultra-light);
             color: var(--neutral-dark);
             line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -477,6 +478,23 @@
 
             .card-enhanced {
                 padding: 2rem;
+            }
+        }
+
+        /* Header text adjustments for mobile screens */
+        @media (max-width: 640px) { /* equivalent to sm breakpoint */
+            header .flex-shrink-0 a span.text-lg {
+                font-size: 0.875rem; /* text-sm */
+                display: block; /* Force new line for the slogan */
+                line-height: 1.2;
+            }
+        }
+        @media (max-width: 480px) { /* Even smaller screens */
+            header .flex-shrink-0 a {
+                font-size: 1.5rem; /* Slightly smaller main title */
+            }
+            header .flex-shrink-0 a span.text-lg {
+                font-size: 0.75rem; /* text-xs */
             }
         }
 
@@ -1909,7 +1927,7 @@
             }, {
                 root: null,
                 rootMargin: '0px',
-                threshold: 0.5 // Trigger when 50% of the section is visible
+                threshold: 0.2 // Trigger when 20% of the section is visible for better mobile activation
             });
 
             // Observe the entire results section
